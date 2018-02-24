@@ -8,22 +8,22 @@
 
 ## Features
 
-*current TODO's:
+* current TODO's:
 
-  *map out UI to modular components and impliment visually in code,
+  * map out UI to modular components and impliment visually in code,
 
-  *make keyboard,
+  * make keyboard,
 
-  *code basic mvp quality animations for UI components,
+  * code basic mvp quality animations for UI components,
 
-  *plan logic basic architecture.
+  * plan logic basic architecture.
 
-*possible features:
+* possible features:
 
-  *reloadable patches,
+  * reloadable patches,
 
-  *sequencer,
+  * sequencer,
 
-  *keyboard mapping,
+  * keyboard mapping,
 
-  *FX's
+  * FX's
