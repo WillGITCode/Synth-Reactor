@@ -4,7 +4,7 @@
 
 ## This is my first pet project using React.
 
-* I will be teaching myself React and React components by making a  browser base keyboard synth.
+* I will be teaching myself React and React components by making a  browser based keyboard synth.
 
 ## Features
 

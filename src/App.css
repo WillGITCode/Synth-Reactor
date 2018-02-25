@@ -1,37 +1,37 @@
 /* App */
 
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
+.app-logo {
   animation: App-logo-spin infinite 10s linear;
   height: 120px;
 }
 
-.App-header {
+.app-header {
   background-color: #222;
   height: 200px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+.app-title {
   font-size: 2em;
 }
 
-.App-intro {
+.app-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+@keyframes app-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
 /* SynthBody */
 
-.SynthBody{
+.synthBody{
   width: 70%;
   color: white;
   background: linear-gradient(to bottom right, black, rgb(0, 95, 112));
@@ -43,30 +43,30 @@
   flex-direction: column;
 }
 
-.SynthBodyRow{
+.synthBodyRow{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.ControlModule{
+.controlModule{
   width: 15%;
   height: 100px;
   color: whitesmoke;
   background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(0, 35, 112));
 }
 
-.PitchWheel{
-  width: 2%;
-  height: 120px;
+.pitchWheel{
+  width: 100%;
+  height: 180px;
   padding: 2%;
-  margin: 2%;
+  margin: 0;
   color: whitesmoke;
   background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(7, 0, 112));
   align-self: flex-end;
 }
 
-.Keyboard{
+.keyboard{
   width: 80%;
   height: 200px;
   padding: 0;
@@ -76,7 +76,7 @@
   justify-content: flex-start;
 }
 
-.Keyboard li {
+.keyboard li {
   width:14.28%;
   height:100%;
   list-style-type:none;
