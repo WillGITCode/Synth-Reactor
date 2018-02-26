@@ -7,6 +7,8 @@ let userData = {
   presets: [
     {
       name: "first preset",
+      synthName: "Mini Moog",
+      isCurrent: true,
       osc: 60,
       fil: 60,
       lfo: 60,
@@ -15,6 +17,8 @@ let userData = {
     },
     {
       name: "second preset",
+      synthName: "Prophet",   
+      isCurrent: false,
       osc: 65,
       fil: 66,
       lfo: 67,
@@ -23,14 +27,14 @@ let userData = {
     },
     {
       name: "third preset",
+      synthName: "Juno 800",
+      isCurrent: false,
       osc: 20,
       fil: 30,
       lfo: 40,
       env: 50,
       patchM: 70
-    },
-
-    
+    }
   ]
 }
 
@@ -41,7 +45,10 @@ class WelcomeHeader extends Component{
       <div className="app-header">
         <div className="welcomeHeader">
           <h1 className="app-title">Synth Reactor</h1>
-          <img src={logo} className="app-logo" alt="logo" />
+          <div className="app-header-username">
+            <img src={logo} className="app-logo" alt="logo" />
+            <h3>Logged in as {userData.user}</h3>
+          </div>
         </div>
       </div>
     );

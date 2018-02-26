@@ -24,6 +24,12 @@
   font-size: large;
 }
 
+.app-header-username{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 @keyframes app-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
