@@ -2,13 +2,47 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+let userData = {
+  user: "William",
+  presets: [
+    {
+      name: "first preset",
+      osc: 60,
+      fil: 60,
+      lfo: 60,
+      env: 60,
+      patchM: 60
+    },
+    {
+      name: "second preset",
+      osc: 65,
+      fil: 66,
+      lfo: 67,
+      env: 68,
+      patchM: 69
+    },
+    {
+      name: "third preset",
+      osc: 20,
+      fil: 30,
+      lfo: 40,
+      env: 50,
+      patchM: 70
+    },
+
+    
+  ]
+}
+
 
 class WelcomeHeader extends Component{
   render(){
     return(
-      <div className="welcomeHeader">
-        <h1 className="app-title">Synth Reactor</h1>
-        <img src={logo} className="app-logo" alt="logo" />
+      <div className="app-header">
+        <div className="welcomeHeader">
+          <h1 className="app-title">Synth Reactor</h1>
+          <img src={logo} className="app-logo" alt="logo" />
+        </div>
       </div>
     );
   }
@@ -24,96 +58,14 @@ class SynthBody extends Component{
         <div className="synthBodyRow">
           <OSCModule />
           <FilterModule />
-          <AmpModule />
-          <ModulationModule />
+          <LFOModule />
+          <EnvelopeModule />
           <PatchModule />
         </div>
 
         <div className="synthBodyRow">
           <PitchWheel />
-
-          <div className="keyboard">
-
-            <li>                
-              <div className="white">                        
-              </div>
-              <div className="black">
-              </div>    
-            </li> 
-            <li>                
-                <div className="white">                         
-                </div>
-                <div className="black">
-                </div>   
-            </li> 
-            <li>                
-                <div className="white">                            
-                </div>
-            </li> 
-            <li>                
-                <div className="white">                      
-                </div>
-                <div className="black">
-                </div>      
-            </li> 
-            <li>                
-                <div className="white">                            
-                </div>
-                <div className="black">
-                </div>
-            </li> 
-            <li>                
-                <div className="white">                        
-                </div>
-                <div className="black">
-                </div>    
-            </li> 
-            <li>                
-                <div className="white">                          
-                </div>
-            </li>
-
-            <li>                
-              <div className="white">                        
-              </div>
-              <div className="black">
-              </div>    
-            </li> 
-            <li>                
-                <div className="white">                         
-                </div>
-                <div className="black">
-                </div>   
-            </li> 
-            <li>                
-                <div className="white">                            
-                </div>
-            </li> 
-            <li>                
-                <div className="white">                      
-                </div>
-                <div className="black">
-                </div>      
-            </li> 
-            <li>                
-                <div className="white">                            
-                </div>
-                <div className="black">
-                </div>
-            </li> 
-            <li>                
-                <div className="white">                        
-                </div>
-                <div className="black">
-                </div>    
-            </li> 
-            <li>                
-                <div className="white">                          
-                </div>
-            </li>
-
-          </div>
-
+          <Keyboard />
         </div>
 
       </div>
@@ -143,9 +95,9 @@ class FilterModule extends Component {
   }
 }
 
-class AmpModule extends Component {
+class LFOModule extends Component {
   render(){
-    let title = "Amp";
+    let title = "LFO";
     return(
       <div className="controlModule">
         <h3>{title}</h3>
@@ -154,9 +106,9 @@ class AmpModule extends Component {
   }
 }
 
-class ModulationModule extends Component {
+class EnvelopeModule extends Component {
   render(){
-    let title = "Modulation";
+    let title = "Envelope";
     return(
       <div className="controlModule">
         <h3>{title}</h3>
@@ -167,7 +119,7 @@ class ModulationModule extends Component {
 
 class PatchModule extends Component {
   render(){
-    let title = "Patch";
+    let title = "Patch Matrix";
     return(
       <div className="controlModule">
         <h3>{title}</h3>
@@ -190,14 +142,102 @@ class PitchWheel extends Component {
   }
 }
 
+class Keyboard extends Component {
+  render(){
+    return(
+      <div className="keyboard">
+        <li>                
+          <div className="white">                        
+          </div>
+          <div className="black">
+          </div>    
+        </li> 
+        <li>                
+            <div className="white">                         
+            </div>
+            <div className="black">
+            </div>   
+        </li> 
+        <li>                
+            <div className="white">                            
+            </div>
+        </li> 
+        <li>                
+            <div className="white">                      
+            </div>
+            <div className="black">
+            </div>      
+        </li> 
+        <li>                
+            <div className="white">                            
+            </div>
+            <div className="black">
+            </div>
+        </li> 
+        <li>                
+            <div className="white">                        
+            </div>
+            <div className="black">
+            </div>    
+        </li> 
+        <li>                
+            <div className="white">                          
+            </div>
+        </li>
+
+        <li>                
+          <div className="white">                        
+          </div>
+          <div className="black">
+          </div>    
+        </li> 
+        <li>                
+            <div className="white">                         
+            </div>
+            <div className="black">
+            </div>   
+        </li> 
+        <li>                
+            <div className="white">                            
+            </div>
+        </li> 
+        <li>                
+            <div className="white">                      
+            </div>
+            <div className="black">
+            </div>      
+        </li> 
+        <li>                
+            <div className="white">                            
+            </div>
+            <div className="black">
+            </div>
+        </li> 
+        <li>                
+            <div className="white">                        
+            </div>
+            <div className="black">
+            </div>    
+        </li> 
+        <li>                
+            <div className="white">                          
+            </div>
+        </li>
+        <li>                
+            <div className="white">                          
+            </div>
+        </li>
+      </div>
+    );
+  }
+}
+
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <header className="app-header">
           <WelcomeHeader />
-        </header>
         
         <SynthBody />
 
